@@ -76,9 +76,9 @@ void process_user_layers(uint16_t layermask)
 
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     {KEYMAP(
-        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5, 
-        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T, 
-        KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,
+        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5, KC_6,
+        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T, KC_LBRC, 
+        KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G, KC_LBRC,
         KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
                           KC_LBRC, KC_RBRC, 
                                             L_LOWER, KC_SPC,
@@ -111,9 +111,9 @@ void setupKeymap() {
  */
     uint32_t lower[MATRIX_ROWS][MATRIX_COLS] =
         KEYMAP( \
-  KC_F12, KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5, \
-  _______,_______,_______,_______,_______,KC_LBRC, \
-  KC_CAPS,KC_HOME,KC_PGDN,KC_PGUP,KC_END, KC_LPRN, \
+  KC_F12, KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5, KC_F6, \
+  _______,_______,_______,_______,_______,KC_LBRC, KC_LBRC, \
+  KC_CAPS,KC_HOME,KC_PGDN,KC_PGUP,KC_END, KC_LPRN, KC_LPRN, \
   _______,KC_UND, KC_CUT, KC_CPY, KC_PST, _______, \
                   _______,_______,                 \
                                   _______,_______, \
@@ -142,9 +142,9 @@ void setupKeymap() {
  */
     uint32_t raise[MATRIX_ROWS][MATRIX_COLS] =
         KEYMAP( \
-  KC_TILD,KC_EXLM,KC_AT,  KC_HASH,KC_DLR, KC_PERC, \
-  KC_MUTE,_______,_______,_______,_______,KC_LBRC, \
-  KC_VOLU,KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_LPRN, \
+  KC_TILD,KC_EXLM,KC_AT,  KC_HASH,KC_DLR, KC_PERC, _______, \
+  KC_MUTE,_______,_______,_______,_______,KC_LBRC, _______, \
+  KC_VOLU,KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_LPRN, _______, \
   KC_VOLD,_______,_______,_______,_______,_______, \
                   _______,_______,                 \
                                   _______,_______, \
@@ -173,14 +173,14 @@ void setupKeymap() {
  */
     uint32_t adjust[MATRIX_ROWS][MATRIX_COLS] =
         KEYMAP( \
-  PRINT_BATTERY,HOME_ADD,WORK_ADD,EMAIL_1,EMAIL_2,_______,   \
-  _______, _______,_______,_______, _______, _______, \
-  _______, _______,_______,_______, _______, _______,  \
-  PRINT_INFO,_______,_______,_______,_______,_______, \
-                      _______,_______,                 \
-                                     _______,_______, \
-                                     _______,_______, \
-                                     _______,_______  \ 
+  PRINT_BATTERY,HOME_ADD,WORK_ADD,EMAIL_1,EMAIL_2,_______, _______,   \
+  _______, _______,_______,_______, _______, _______, _______,        \
+  _______, _______,_______,_______, _______, _______, _______,        \
+  PRINT_INFO,_______,_______,_______,_______,_______,                 \
+                      _______,_______,                                \
+                                     _______,_______,                 \
+                                     _______,_______,                 \
+                                     _______,_______                  \ 
 );
 
     /*
