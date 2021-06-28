@@ -76,12 +76,11 @@ void process_user_layers(uint16_t layermask)
 
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     {KEYMAP(
-        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5, KC_6,
-        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T, KC_LBRC, 
-        KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G, KC_LBRC,
+        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,
+        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_LBRC, 
+        KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_LBRC,
         KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
-                          KC_LBRC, KC_RBRC, 
-                                            L_LOWER, KC_SPC,
+        _______, _______, KC_LBRC, KC_RBRC, L_LOWER, KC_SPC,
                                             KC_TAB,  KC_HOME,
                                             KC_BSPC, KC_GRAVE
     )};
@@ -115,7 +114,7 @@ void setupKeymap() {
   _______,_______,_______,_______,_______,KC_LBRC, KC_LBRC, \
   KC_CAPS,KC_HOME,KC_PGDN,KC_PGUP,KC_END, KC_LPRN, KC_LPRN, \
   _______,KC_UND, KC_CUT, KC_CPY, KC_PST, _______, \
-                  _______,_______,                 \
+                  _______,_______, _______, _______,                 \
                                   _______,_______, \
                                   _______,_______, \
                                   _______,_______  \
@@ -146,7 +145,7 @@ void setupKeymap() {
   KC_MUTE,_______,_______,_______,_______,KC_LBRC, _______, \
   KC_VOLU,KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_LPRN, _______, \
   KC_VOLD,_______,_______,_______,_______,_______, \
-                  _______,_______,                 \
+                  _______,_______, _______, _______,                 \
                                   _______,_______, \
                                   _______,_______, \
                                   _______,_______  \
@@ -176,8 +175,8 @@ void setupKeymap() {
   PRINT_BATTERY,HOME_ADD,WORK_ADD,EMAIL_1,EMAIL_2,_______, _______,   \
   _______, _______,_______,_______, _______, _______, _______,        \
   _______, _______,_______,_______, _______, _______, _______,        \
-  PRINT_INFO,_______,_______,_______,_______,_______,                 \
-                      _______,_______,                                \
+  PRINT_INFO,_______,_______,_______,_______,_______, _______,                 \
+                      _______,_______, _______,                                \
                                      _______,_______,                 \
                                      _______,_______,                 \
                                      _______,_______                  \ 
