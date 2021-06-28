@@ -251,14 +251,13 @@ void process_user_layers(uint16_t layermask)
 
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     {KEYMAP(
-        KC_7,     KC_8,    KC_9,    KC_0,     KC_MINS,  KC_EQL,   KC_BSPACE, 
-        KC_RBRC,  KC_Y,    KC_U,    KC_I,     KC_O,    KC_P,     KC_MINS, 
-        KC_RBRC,  KC_H,    KC_J,    KC_K,     KC_L,    KC_SCOLON,KC_QUOTE,
-                  KC_N,    KC_M,    KC_COMMA, KC_DOT,  KC_SLSH,  KC_BSLS,
-                           KC_PLUS, KC_EQL, 
-        KC_ENT,  L_RAISE,
-        KC_END,  KC_DEL,  
-        KC_LGUI, KC_LALT
+        KC_7,     KC_8,    KC_9,    KC_0,     KC_MINS, KC_EQL,    _______, 
+        KC_RBRC,  KC_Y,    KC_U,    KC_I,     KC_O,    KC_P,      _______, 
+        KC_RBRC,  KC_H,    KC_J,    KC_K,     KC_L,    KC_SCOLON, _______,
+                  KC_N,    KC_M,    KC_COMMA, KC_DOT,  KC_SLSH,   _______,
+                  KC_ENT,  L_RAISE, KC_PLUS,  KC_EQL,  _______,   _______, 
+                  KC_END,  KC_DEL,  
+                  KC_LGUI, KC_LALT
     )};
 
  
@@ -290,11 +289,10 @@ void setupKeymap() {
   _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,   \
   _______, KC_RBRC, _______, _______, KC_INS , _______, KC_MUTE,  \
   _______, KC_RPRN, KC_MPRV, KC_MPLY, KC_MNXT, _______, KC_VOLU,  \
-  _______, _______, _______, _______, _______, KC_VOLD,  \
-                    _______, _______,                    \
-  _______, _______,                                      \
-  _______, _______,                                      \
-  _______, _______                                       \ 
+           _______, _______, _______, _______, _______, KC_VOLD,  \
+           _______, _______, _______, _______, _______, _______,  \
+           _______, _______,                                      \
+           _______, _______                                       \ 
 );
 
 /* Raise
@@ -321,11 +319,10 @@ void setupKeymap() {
   _______, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,   \
   _______, KC_RBRC, KC_P7 ,  KC_P8 ,  KC_P9 ,  KC_MINS, KC_UNDS,  \
   _______, KC_RPRN, KC_P4 ,  KC_P5 ,  KC_P6 ,  KC_PLUS, KC_PIPE,  \
-  KC_NLCK, KC_P1 ,  KC_P2 ,  KC_P3 ,  KC_SLSH, _______,  \
-                    KC_P0 ,  KC_DOT,                     \
-  _______, _______,                                      \
-  _______, _______,                                      \
-  _______, _______                                       \ 
+           KC_NLCK, KC_P1 ,  KC_P2 ,  KC_P3 ,  KC_SLSH, _______,  \
+           _______, _______, KC_P0 ,  KC_DOT,  _______, _______,  \
+           _______, _______,                                      \
+           _______, _______                                       \ 
 );
 
 /* Adjust
@@ -352,11 +349,10 @@ void setupKeymap() {
   _______, _______, _______, _______, _______, _______,PRINT_BATTERY,  \
   _______, _______, _______, _______, _______, _______, _______,  \
   _______, _______, _______, _______, _______, _______, _______,  \   
-  _______, _______, _______, _______, _______, PRINT_INFO,\
-                    _______, _______,                    \
-  _______, _______,                                      \
-  _______, _______,                                      \
-  _______, _______                                       \ 
+          _______, _______, _______, _______, _______, PRINT_INFO,\
+          _______, _______, _______, _______, _______, _______,   \
+          _______, _______,                                       \
+          _______, _______                                        \ 
 );
 
     /*

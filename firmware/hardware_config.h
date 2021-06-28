@@ -26,13 +26,13 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 7
 
-#if KEYBOARD_SIDE == LEFT
-#define MATRIX_ROW_PINS { 27, 28, 30, 29, 15, 16 }
-#define MATRIX_COL_PINS { 11, 13, 14, 4, 2, 3, 12 } 
-#else
-#define MATRIX_ROW_PINS { 26, 29, 27, 28, 30, 15, 16 }
-#define MATRIX_COL_PINS { 11, 13, 14, 12, 2, 3 } 
-#endif
+/* #if KEYBOARD_SIDE == LEFT */
+/* #define MATRIX_ROW_PINS { 27, 28, 30, 29, 15, 16 } */
+/* #define MATRIX_COL_PINS { 11, 13, 14, 4, 2, 3, 12 } */ 
+/* #else */
+#define MATRIX_ROW_PINS { 3, 2, 12, 14, 11, 13 }
+#define MATRIX_COL_PINS {16, 15, 30, 26, 29, 27, 28} 
+/* #endif */
 
 #define UNUSED_PINS {}
 
