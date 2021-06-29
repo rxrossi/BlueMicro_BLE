@@ -55,36 +55,37 @@ void process_user_layers(uint16_t layermask)
 #if KEYBOARD_SIDE == LEFT
 
 /* Qwerty
- * ,------------------------------------------------.
- * | Esc  |   1  |   2  |   3  |   4  |   5  |   6  | 
- * |------------------------------------------------|
- * | Tab  |   Q  |   W  |   E  |   R  |   T  |   [  |
- * |------+------+------+------+------+-------------|
- * | CAPS |   A  |   S  |   D  |   F  |   G  |      |
- * |------+------+------+------+------+-------------'
- * |SHIFT |   Z  |   X  |   C  |   V  |   B  |
+ * ,-----------------------------------------.
+ * | Esc  |   1  |   2  |   3  |   4  |   5  | 
+ * |-----------------------------------------|
+ * | Tab  |   Q  |   W  |   E  |   R  |   T  | 
  * |------+------+------+------+------+------|
- * | CTRL |      |      |      |Lower |Space |
- * `------+------+------+---------------------------. 
- *                                      | Tab | Home|
- *                                      |-----|-----| 
- *                                      | BSpc|  `  |
- *                                      `-----------' 
+ * | Shift|   A  |   S  |   D  |   F  |   G  |
+ * |------+------+------+------+------+------|
+ * | Ctrl |   Z  |   X  |   C  |   V  |   B  |
+ * `------+------+------+------+------+------'
+ *               |   [  |   ]  |
+ *               `---------------------------.
+ *                             |Lower |Space |
+ *                             `-------------------------. 
+ *                                           | Tab | Home|
+ *                                           ------------| 
+ *                                           | BSpc|  `  |
+ *                                           ------------' 
  */
 
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     {KEYMAP(
-        KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,
-        KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_LBRC, 
-        KC_CAPS,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_LBRC,
-        KC_LSFT,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
-        KC_LCTRL, _______, _______, KC_RBRC, L_LOWER, KC_SPC,
-
-                                             KC_TAB,  KC_HOME,
-                                             KC_BSPC, KC_GRAVE
+        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,
+        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_LBRC, 
+        KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_LBRC,
+        KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
+        _______, _______, KC_LBRC, KC_RBRC, L_LOWER, KC_SPC,
+                                            KC_TAB,  KC_HOME,
+                                            KC_BSPC, KC_GRAVE
     )};
 
-     
+ 
 void setupKeymap() {
 
 
@@ -228,32 +229,34 @@ void process_user_layers(uint16_t layermask)
 #if KEYBOARD_SIDE == RIGHT
 
 /* Qwerty
- *                ,------------------------------------------------.
- *                |   7  |   8  |   9  |   0  |   -  |   +  | BKPC | 
- *                |------------------------------------------------|
- *                |   Y  |   U  |   I  |   O  |   P  |   P  |  |   |
- *                |------+------+------+------+------|-------------|
- *                |   H  |   J  |   K  |   L  |   ;  |   ;  |  '   |
- *                `------+------+------+------+------|------|------|
- *                       |   N  |   M  |   ,  |   .  |   /  |RSHIFT|
- *                       `------+------+------+------+------|------|
- *                       |Enter |Raise |      |      |      |RCTRL | 
- *                ,------------------------------------------------'
- *                | End | Del |
- *                |-----------| 
- *                | GUI | Alt |
- *                `-----------' 
+ *                ,-----------------------------------------.
+ *                |   6  |   7  |   8  |   9  |   0  | Bksp |
+ *                |-----------------------------------------|
+ *                |   Y  |   U  |   I  |   O  |   P  |  -   |
+ *                |------+------+------+------+-------------|
+ *                |   H  |   J  |   K  |   L  |   ;  |  '   |
+ *                |------+------+------+------+------|------|
+ *                |   N  |   M  |   ,  |   .  |   /  |   \  |
+ *                `-----------------------------------------'
+ *                              |   +  |   =  |
+ *                ,---------------------------'
+ *                | Enter| Raise|
+ *    ,-------------------------' 
+ *    | End | Del |
+ *    |-----------| 
+ *    | GUI | Alt |
+ *    `-----------' 
  */
 
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     {KEYMAP(
         KC_7,     KC_8,    KC_9,    KC_0,     KC_MINS, KC_EQL,    KC_BSPACE, 
         KC_RBRC,  KC_Y,    KC_U,    KC_I,     KC_O,    KC_P,      KC_BSLS, 
-        KC_RBRC,  KC_H,    KC_J,    KC_K,     KC_L,    KC_SCOLON, KC_QUOTE,
+        KC_RBRC,  KC_H,    KC_J,    KC_K,     KC_L,    KC_SCOLON, KC_COLN,
                   KC_N,    KC_M,    KC_COMMA, KC_DOT,  KC_SLSH,   KC_RSHIFT,
-                  KC_ENT,  L_RAISE, ________,  _______,  _______, KC_RCTRL, 
-        KC_END,   KC_DEL,  
-        KC_LGUI,  KC_LALT
+                  KC_ENT,  L_RAISE, KC_PLUS,  KC_EQL,  _______,   _______, 
+                  KC_END,  KC_DEL,  
+                  KC_LGUI, KC_LALT
     )};
 
  
