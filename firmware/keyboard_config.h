@@ -21,7 +21,7 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 #define KEYBOARD_CONFIG_H
 #include "hardware_config.h"
 
-#define KEYBOARD_SIDE RIGHT 
+#define KEYBOARD_SIDE LEFT 
 // CHANGE THIS FOR THE KEYBOARD TO MATCH WHAT IS BEING FLASHED. OPTIONS: LEFT  RIGHT  MASTER
 
 #define DEVICE_NAME_R                        "Manuform(5x7)_R"                          /**< Name of device. Will be included in the advertising data. */
@@ -58,8 +58,8 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
       k20,  k21,  k22, k23, k24, k25, k26, \
             k31,  k32, k33, k34, k35, k36, \
             k41,  k42, k43, k44, k45, k46, \
-      k53,  k51,                           \
-      k54,  k52                            \
+            k51,  k52,                           \
+            k53,  k54                            \
 ) \
 { \
     {k00,   k01, k02, k03, k04, k05,   k06   }, \

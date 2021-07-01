@@ -67,11 +67,11 @@ void process_user_layers(uint16_t layermask)
  *               |   [  |   ]  |
  *               `---------------------------.
  *                             |Lower |Space |
- *                             `-------------------------. 
- *                                           | Tab | Home|
- *                                           ------------| 
- *                                           | BSpc|  `  |
- *                                           ------------' 
+ *                             `--------------------------. 
+ *                                           | BSpc | Home|
+ *                                           |------------| 
+ *                                           | Tab  |  `  |
+ *                                           `------------' 
  */
 
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
@@ -81,8 +81,8 @@ std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
         KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_LBRC,
         KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
         _______, _______, KC_LBRC, KC_RBRC, L_LOWER, KC_SPC,
-                                            KC_TAB,  KC_HOME,
-                                            KC_BSPC, KC_GRAVE
+                                            KC_BSPC, KC_HOME,
+                                            KC_TAB,  KC_GRAVE
     )};
 
  
@@ -250,13 +250,13 @@ void process_user_layers(uint16_t layermask)
 
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     {KEYMAP(
-        KC_7,     KC_8,    KC_9,    KC_0,     KC_MINS, KC_EQL,    KC_BSPACE, 
+        KC_EQL,   KC_6,    KC_7,    KC_8,     KC_9,    KC_0,      KC_MINUS, 
         KC_RBRC,  KC_Y,    KC_U,    KC_I,     KC_O,    KC_P,      KC_BSLS, 
         KC_RBRC,  KC_H,    KC_J,    KC_K,     KC_L,    KC_SCOLON, KC_COLN,
                   KC_N,    KC_M,    KC_COMMA, KC_DOT,  KC_SLSH,   KC_RSHIFT,
                   KC_ENT,  L_RAISE, KC_PLUS,  KC_EQL,  _______,   _______, 
-                  KC_END,  KC_DEL,  
-                  KC_LGUI, KC_LALT
+                  KC_END,  KC_LCTRL,  
+                  KC_HOME, KC_LGUI
     )};
 
  
