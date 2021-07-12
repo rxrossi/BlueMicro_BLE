@@ -25,11 +25,11 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 /* key matrix size */
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 7
-#define KEYBOARD_SIDE RIGHT
+#define KEYBOARD_SIDE LEFT
 
 #if KEYBOARD_SIDE == LEFT
-#define MATRIX_ROW_PINS { 11, 13, 14, 12, 2, 3 } 
-#define MATRIX_COL_PINS { 27, 26, 28, 30, 15, 29, 16 }
+#define MATRIX_ROW_PINS { 16, 15, 30, 29, 28, 27} 
+#define MATRIX_COL_PINS { 4, 2, 12, 14, 11, 13, 3}
 #else
 #define MATRIX_ROW_PINS { 3, 2, 12, 14, 13, 11 }
 #define MATRIX_COL_PINS {16, 15, 30, 26, 29, 27, 28} 
@@ -44,9 +44,9 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 */
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
-     #define BATTERY_TYPE BATT_LIPO
-        #define VBAT_PIN  31
-        #define  STATUS_BLE_LED_PIN  19  //blue = 0.19
+#define BATTERY_TYPE BATT_LIPO
+#define VBAT_PIN  31
+#define  STATUS_BLE_LED_PIN  19  //blue = 0.19
 #define  STATUS_KB_LED_PIN 17  //red = 0.17
     /*    #define D3      6  //
         #define D2      8   //
