@@ -64,11 +64,9 @@ void process_user_layers(uint16_t layermask)
  * |------+------+------+------+------+------|
  * | Ctrl |   Z  |   X  |   C  |   V  |   B  |
  * `------+------+------+------+------+------'
- *               |   [  |   ]  |
- *               `---------------------------.
- *                             |Lower |Space |
- *                             `--------------------------. 
- *                                           | BSpc | Home|
+ *               |   [  |   ]  | BSpc |Space |
+ *               `----------------------------------------. 
+ *                                           | lower| Home|
  *                                           |------------| 
  *                                           | Tab  |  `  |
  *                                           `------------' 
@@ -76,12 +74,12 @@ void process_user_layers(uint16_t layermask)
 
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     {KEYMAP(
-        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,
+        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    _______,
         KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_LBRC, 
-        KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_LBRC,
+        KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_GRAVE,
         KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
-        _______, _______, KC_LBRC, KC_RBRC, L_LOWER, KC_SPC,
-                                            KC_BSPC, KC_HOME,
+        _______, _______, KC_LBRC, KC_RBRC, KC_LGUI, KC_SPC,
+                                            L_LOWER, KC_BSPC,
                                             KC_TAB,  KC_GRAVE
     )};
 
@@ -237,15 +235,13 @@ void process_user_layers(uint16_t layermask)
  *                |   H  |   J  |   K  |   L  |   ;  |  '   |
  *                |------+------+------+------+------|------|
  *                |   N  |   M  |   ,  |   .  |   /  |   \  |
- *                `-----------------------------------------'
- *                              |   +  |   =  |
- *                ,---------------------------'
- *                | Enter| Raise|
- *    ,-------------------------' 
- *    | End | CTRL |
- *    |------------| 
- *    | HOME| LGUI |
- *    `------------' 
+ *                |-----------------------------------------'
+ *                | Enter| RCRTL|   +  |   =  |
+ *    ,---------------------------------------' 
+ *    | RGUI | RAISE|
+ *    |-------------| 
+ *    | HOME | END  |
+ *    `-------------' 
  */
 
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
@@ -254,9 +250,9 @@ std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
         KC_RBRC,  KC_Y,    KC_U,    KC_I,     KC_O,    KC_P,      KC_BSLS, 
         KC_RBRC,  KC_H,    KC_J,    KC_K,     KC_L,    KC_SCOLON, KC_QUOTE,
                   KC_N,    KC_M,    KC_COMMA, KC_DOT,  KC_SLSH,   KC_RSHIFT,
-                  KC_ENT,  L_RAISE, KC_PLUS,  KC_EQL,  _______,   _______, 
-                  KC_END,  KC_RCTRL,  
-                  KC_HOME, KC_LGUI
+                  KC_ENT,  KC_RCTL, KC_PLUS,  KC_EQL,  _______,   _______, 
+        KC_RGUI,  L_RAISE,  
+        KC_HOME,  KC_END
     )};
 
  
