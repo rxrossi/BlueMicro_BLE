@@ -11,63 +11,54 @@ Redistribution and use in source and binary forms, with or without modification,
 
 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR 
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
 #ifndef HARDWARE_CONFIG_H
 #define HARDWARE_CONFIG_H
+#define KEYBOARD_SIDE RIGHT
 #include "hardware_variants.h"
 
 /* HARDWARE DEFINITION*/
 /* key matrix size */
-#define MATRIX_ROWS 6
-#define MATRIX_COLS 7
-#define KEYBOARD_SIDE RIGHT
+#define MATRIX_ROWS 7
+#define MATRIX_COLS 6
+
+#define MATRIX_ROW_PINS {29, 2, 47, 45, 43, 10, 9 } // { F5, F6, F7, B1, B3, B2, B6 }
 
 #if KEYBOARD_SIDE == LEFT
-#define MATRIX_ROW_PINS {28,27,30,29,15,16}
-#define MATRIX_COL_PINS {13,11,12,14,3,4,2}
+#define MATRIX_COL_PINS {38, 36, 11, 32, 24, 22} // { D4, C6, D7, E6, B4, B5 }
 #else
-#define MATRIX_ROW_PINS {2,3,12,14,13,11}
-#define MATRIX_COL_PINS {30,26,28,27,16,29,15}
+#define MATRIX_COL_PINS {22, 24, 32, 11, 36, 38} // { D4, C6, D7, E6, B4, B5 }
 #endif
 
+// Considering left side as the side with battery GND
+
+// ROW on the left side, ESC on the bottom, the "key5" on the top (6th pin)
+// COL on the right side, with the key "key5" being at the top (6th key)
 #define UNUSED_PINS {}
 
-/* Commented because LEDs are not used. Pin 16 is conflicting with matrix mapping
-#define BACKLIGHT_LED_PIN 16
-#define DEFAULT_PWM_VALUE 10000            // PWM intensity
-#define BACKLIGHT_PWM_ON 1
-*/
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
-#define BATTERY_TYPE BATT_LIPO
-#define VBAT_PIN  31
-#define  STATUS_BLE_LED_PIN  19  //blue = 0.19
-#define  STATUS_KB_LED_PIN 17  //red = 0.17
-    /*    #define D3      6  //
-        #define D2      8   //
-        #define D1      25  //sda
-        #define D0      26  //scl
-        #define D4      27
-        #define C6      28
-        #define D7      29
-        #define E6      30
-        #define B4      15
-        #define B5      16
 
-        #define F4      5
-        #define F5      4
-        #define F6      3
-        #define F7      2
-        #define B1      12  //sck
-        #define B3      14  //miso
-        #define B2      13  //mosi
-        #define B6      11
-        #define NC      24 */
+#define BACKLIGHT_PWM_ON 0
+#define WS2812B_LED_PIN 6
+
+#define WS2812B_LED_COUNT 12
+#define WS2812B_LED_ON 0 // LEDs are disabled by default
+ 
+
+ #define ARDUINO_NICE_NANO 1 // used in debug_cli.cpp to bypass 0.14 and 0.16 that are directly connected to 0.18 (reset)
+ 
+#define BATTERY_TYPE BATT_LIPO
+#define VBAT_PIN  4
+#define VCC_PIN 13
+#define VCC_POLARITY_ON 0
+       #define  STATUS_BLE_LED_PIN  15  //blue = 0.15
+     //#define  STATUS_KB_LED_PIN 0  //no RED LED
+ 
     
 #endif /* HARDWARE_CONFIG_H */
-
