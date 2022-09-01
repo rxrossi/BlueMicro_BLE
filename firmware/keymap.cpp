@@ -79,13 +79,13 @@ void process_user_layers(uint16_t layermask)
 
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     {KEYMAP(
-	      KC_F12,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,
-        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5, 
-        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T, 
-        KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,
-        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
-                          KC_LBRC, KC_RBRC, 
-                                            KC_LGUI,  KC_SPC,
+	      KC_F12,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,
+        KC_GRAVE, KC_1,    KC_2,    KC_3,    KC_4,    KC_5, 
+        KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T, 
+        KC_CAPS,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,
+        KC_LSFT,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
+                           KC_LBRC, KC_RBRC, 
+                                            KC_LGUI, KC_SPC,
                                             L_LOWER, KC_BSPC,
                                             KC_HOME, KC_GRAVE
     )};
@@ -118,7 +118,7 @@ void setupKeymap() {
     uint32_t lower[MATRIX_ROWS][MATRIX_COLS] =
         KEYMAP( \
   _______,_______,_______,_______,_______,_______, \		
-  _______,_______,_______,_______,_______,_______, \
+  KC_ESC ,KC_F1  ,KC_F2  ,KC_F3  ,KC_F4  ,KC_F5  , \
   _______,_______,_______,_______,_______,KC_LBRC, \
   KC_CAPS,KC_HOME,KC_PGDN,KC_PGUP,KC_END, KC_LPRN, \
   _______,KC_UND, KC_CUT, KC_CPY, KC_PST, _______, \
@@ -307,7 +307,7 @@ void setupKeymap() {
  */
     uint32_t lower[MATRIX_ROWS][MATRIX_COLS] =
         KEYMAP( \
-  _______, _______, _______, _______, _______, _______,  \
+  KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11, \
   _______, _______, _______, _______, _______, _______,  \
   KC_RBRC, _______, _______, KC_INS , _______, KC_MUTE,  \
   KC_RPRN, KC_MPRV, KC_MPLY, KC_MNXT, _______, KC_VOLU,  \
